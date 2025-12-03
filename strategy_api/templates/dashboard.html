@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .positive {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .negative {
+            color: #c62828;
+            font-weight: bold;
+        }
+        
+        .sell {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+        
+        .buy {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+        
+        .tick {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+        
+        .ticker-symbol {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .empty-message {
+            text-align: center;
+            color: #666;
+            padding: 40px;
+            font-style: italic;
+        }
+        
+        .summary {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .summary-item {
+            text-align: center;
+        }
+        
+        .summary-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Trading Strategy Dashboard</h1>
+        
+        <div class="section">
+            <h2>💼 Current Positions</h2>
+            {% if positions %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Quantity</th>
+                        <th>Purchase Price</th>
+                        <th>Current Price</th>
+                        <th>Unrealized P&L</th>
+                        <th>% Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for position in positions %}
+                    <tr>
+                        <td><span class="ticker-symbol">{{ position.ticker }}</span></td>
+                        <td>{{ position.quantity }}</td>
+                        <td>${{ "%.2f"|format(position.purchase_price) }}</td>
+                        <td>${{ "%.2f"|format(position.current_price) }}</td>
+                        <td class="{{ 'positive' if position.unrealized_pnl > 0 else 'negative' }}">
+                            ${{ "%.2f"|format(position.unrealized_pnl) }}
+                        </td>
+                        <td class="{{ 'positive' if position.current_price > position.purchase_price else 'negative' }}">
+                            {% set pct_change = ((position.current_price - position.purchase_price) / position.purchase_price * 100) %}
+                            {{ "%.2f"|format(pct_change) }}%
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <div class="summary">
+                <div class="summary-item">
+                    <div class="summary-label">Total Positions</div>
+                    <div class="summary-value">{{ positions|length }}</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Total Unrealized P&L</div>
+                    {% set total_pnl = 0 %}
+                    {% for position in positions %}
+                        {% set total_pnl = total_pnl + position.unrealized_pnl %}
+                    {% endfor %}
+                    <div class="summary-value" style="color: {{ 'green' if total_pnl > 0 else 'red' }}">
+                        ${{ "%.2f"|format(total_pnl) }}
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p class="empty-message">No positions found. Start trading to see your portfolio here!</p>
+            {% endif %}
+        </div>
+        
+        <div class="section">
+            <h2>📈 Trading History</h2>
+            {% if transactions %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Ticker</th>
+                        <th>Action</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions[::-1] %}
+                    <tr>
+                        <td>{{ transaction.date }}</td>
+                        <td><span class="ticker-symbol">{{ transaction.ticker }}</span></td>
+                        <td>
+                            {% if transaction.action == 'SELL' %}
+                                <span class="sell">SELL</span>
+                            {% elif transaction.action == 'BUY' %}
+                                <span class="buy">BUY</span>
+                            {% else %}
+                                <span class="tick">{{ transaction.action }}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ transaction.quantity if transaction.quantity else '-' }}</td>
+                        <td>${{ "%.2f"|format(transaction.price) }}</td>
+                        <td>{{ transaction.note }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="empty-message">No trading history yet. Transactions will appear here as they occur.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

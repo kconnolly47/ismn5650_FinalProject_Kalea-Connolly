@@ -1,0 +1,114 @@
+[
+  {
+    "date": "2025-11-05",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-05",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Price decreased - stay"
+  },
+  {
+    "date": "2025-11-07",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.0,
+    "note": "Price decreased - stay"
+  }
+]

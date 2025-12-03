@@ -1,1 +1,1 @@
-# ismn5650_FinalProject_Kalea-Connolly
+# ismn5650-template

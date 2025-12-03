@@ -1,0 +1,17 @@
+[
+  {
+    "purchase_price": 1.0,
+    "quantity": 4859.26,
+    "ticker": "CASH"
+  },
+  {
+    "purchase_price": 85.48,
+    "quantity": 1.0,
+    "ticker": "HOMR"
+  },
+  {
+    "purchase_price": 55.26,
+    "quantity": 1.0,
+    "ticker": "MEDC"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2025-10-25",
+    "ticker": "AAPL",
+    "action": "BUY",
+    "quantity": 10,
+    "price": 180.0,
+    "note": "Initial position"
+  },
+  {
+    "date": "2025-10-26",
+    "ticker": "MSFT",
+    "action": "BUY",
+    "quantity": 5,
+    "price": 410.0,
+    "note": "Opened position"
+  },
+  {
+    "date": "2025-10-27",
+    "ticker": "AAPL",
+    "action": "TICK_UPDATE",
+    "price": 182.5,
+    "note": "Market update tick"
+  },
+  {
+    "date": "2025-10-28",
+    "ticker": "GOOG",
+    "action": "BUY",
+    "quantity": 8,
+    "price": 142.0,
+    "note": "New entry"
+  },
+  {
+    "date": "2025-10-29",
+    "ticker": "MSFT",
+    "action": "TICK_UPDATE",
+    "price": 405.5,
+    "note": "Price drop noted"
+  }
+]

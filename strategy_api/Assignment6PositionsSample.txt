@@ -1,0 +1,23 @@
+[
+  {
+    "ticker": "AAPL",
+    "quantity": 10,
+    "purchase_price": 180.0,
+    "current_price": 184.5,
+    "unrealized_pnl": 45.0
+  },
+  {
+    "ticker": "MSFT",
+    "quantity": 5,
+    "purchase_price": 410.0,
+    "current_price": 405.5,
+    "unrealized_pnl": -22.5
+  },
+  {
+    "ticker": "GOOG",
+    "quantity": 8,
+    "purchase_price": 142.0,
+    "current_price": 145.3,
+    "unrealized_pnl": 26.4
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "trade_id": "37e6dca10baa",
+    "timestamp": "2025-11-20T10:54:19.239573",
+    "day": "2025-04-03",
+    "recommendations": [
+      {
+        "action": "STAY",
+        "ticker": "AUTX",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "CASH",
+        "quantity": 0
+      },
+      {
+        "action": "SELL",
+        "ticker": "EVGO",
+        "quantity": 2
+      },
+      {
+        "action": "STAY",
+        "ticker": "HOMR",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "MEDC",
+        "quantity": 0
+      }
+    ],
+    "positions_before": [
+      {
+        "ticker": "AUTX",
+        "quantity": 15.0,
+        "purchase_price": 141.71
+      },
+      {
+        "ticker": "CASH",
+        "quantity": 962.09,
+        "purchase_price": 1.0
+      },
+      {
+        "ticker": "EVGO",
+        "quantity": 10.0,
+        "purchase_price": 177.67
+      },
+      {
+        "ticker": "HOMR",
+        "quantity": 1.0,
+        "purchase_price": 78.42
+      },
+      {
+        "ticker": "MEDC",
+        "quantity": 1.0,
+        "purchase_price": 57.14
+      }
+    ],
+    "positions_after": [
+      {
+        "ticker": "AUTX",
+        "quantity": 15.0,
+        "purchase_price": 141.71
+      },
+      {
+        "ticker": "CASH",
+        "quantity": 962.09,
+        "purchase_price": 1.0
+      },
+      {
+        "ticker": "EVGO",
+        "quantity": 10.0,
+        "purchase_price": 177.67
+      },
+      {
+        "ticker": "HOMR",
+        "quantity": 1.0,
+        "purchase_price": 78.42
+      },
+      {
+        "ticker": "MEDC",
+        "quantity": 1.0,
+        "purchase_price": 57.14
+      }
+    ],
+    "unrealized_pnl": 0.0,
+    "mothership_response": {
+      "error": "400 Client Error: BAD REQUEST for url: https://mothership-crg7hzedd6ckfegv.eastus-01.azurewebsites.net/make_trade"
+    }
+  },
+  {
+    "trade_id": "683d1dd12c92",
+    "timestamp": "2025-11-20T10:56:50.384881",
+    "day": "2025-04-03",
+    "recommendations": [
+      {
+        "action": "STAY",
+        "ticker": "AUTX",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "CASH",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "EVGO",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "HOMR",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "MEDC",
+        "quantity": 0
+      }
+    ],
+    "positions_before": [
+      {
+        "ticker": "AUTX",
+        "quantity": 15.0,
+        "purchase_price": 141.71
+      },
+      {
+        "ticker": "CASH",
+        "quantity": 962.09,
+        "purchase_price": 1.0
+      },
+      {
+        "ticker": "EVGO",
+        "quantity": 10.0,
+        "purchase_price": 177.67
+      },
+      {
+        "ticker": "HOMR",
+        "quantity": 1.0,
+        "purchase_price": 78.42
+      },
+      {
+        "ticker": "MEDC",
+        "quantity": 1.0,
+        "purchase_price": 57.14
+      }
+    ],
+    "positions_after": [
+      {
+        "purchase_price": 1.0,
+        "quantity": 5000.0,
+        "ticker": "CASH"
+      }
+    ],
+    "unrealized_pnl": 0.0,
+    "mothership_response": {
+      "Positions": [
+        {
+          "purchase_price": 1.0,
+          "quantity": 5000.0,
+          "ticker": "CASH"
+        }
+      ],
+      "success": "trades made successfully"
+    }
+  },
+  {
+    "trade_id": "c5e52ccf84d3",
+    "timestamp": "2025-11-20T11:11:00.436784",
+    "day": "2025-04-03",
+    "recommendations": [
+      {
+        "action": "STAY",
+        "ticker": "AUTX",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "CASH",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "EVGO",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "HOMR",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "MEDC",
+        "quantity": 0
+      }
+    ],
+    "positions_before": [
+      {
+        "ticker": "AUTX",
+        "quantity": 15.0,
+        "purchase_price": 141.71
+      },
+      {
+        "ticker": "CASH",
+        "quantity": 962.09,
+        "purchase_price": 1.0
+      },
+      {
+        "ticker": "EVGO",
+        "quantity": 10.0,
+        "purchase_price": 177.67
+      },
+      {
+        "ticker": "HOMR",
+        "quantity": 1.0,
+        "purchase_price": 78.42
+      },
+      {
+        "ticker": "MEDC",
+        "quantity": 1.0,
+        "purchase_price": 57.14
+      }
+    ],
+    "positions_after": [
+      {
+        "purchase_price": 1.0,
+        "quantity": 5000.0,
+        "ticker": "CASH"
+      }
+    ],
+    "unrealized_pnl": 0.0,
+    "mothership_response": {
+      "Positions": [
+        {
+          "purchase_price": 1.0,
+          "quantity": 5000.0,
+          "ticker": "CASH"
+        }
+      ],
+      "success": "trades made successfully"
+    }
+  },
+  {
+    "trade_id": "4f47c5fe24ea",
+    "timestamp": "2025-11-20T23:22:21.256067",
+    "day": "2025-04-03",
+    "recommendations": [
+      {
+        "action": "STAY",
+        "ticker": "AUTX",
+        "quantity": 0
+      },
+      {
+        "action": "STAY",
+        "ticker": "EVGO",
+        "quantity": 0
+      },
+      {
+        "action": "BUY",
+        "ticker": "HOMR",
+        "quantity": 1
+      },
+      {
+        "action": "BUY",
+        "ticker": "MEDC",
+        "quantity": 1
+      }
+    ],
+    "positions_before": [
+      {
+        "ticker": "AUTX",
+        "quantity": 15.0,
+        "purchase_price": 141.71
+      },
+      {
+        "ticker": "CASH",
+        "quantity": 962.09,
+        "purchase_price": 1.0
+      },
+      {
+        "ticker": "EVGO",
+        "quantity": 10.0,
+        "purchase_price": 177.67
+      },
+      {
+        "ticker": "HOMR",
+        "quantity": 1.0,
+        "purchase_price": 78.42
+      },
+      {
+        "ticker": "MEDC",
+        "quantity": 1.0,
+        "purchase_price": 57.14
+      }
+    ],
+    "positions_after": [
+      {
+        "purchase_price": 1.0,
+        "quantity": 4859.26,
+        "ticker": "CASH"
+      },
+      {
+        "purchase_price": 85.48,
+        "quantity": 1.0,
+        "ticker": "HOMR"
+      },
+      {
+        "purchase_price": 55.26,
+        "quantity": 1.0,
+        "ticker": "MEDC"
+      }
+    ],
+    "unrealized_pnl": 0.0,
+    "mothership_response": {
+      "Positions": [
+        {
+          "purchase_price": 1.0,
+          "quantity": 4859.26,
+          "ticker": "CASH"
+        },
+        {
+          "purchase_price": 85.48,
+          "quantity": 1.0,
+          "ticker": "HOMR"
+        },
+        {
+          "purchase_price": 55.26,
+          "quantity": 1.0,
+          "ticker": "MEDC"
+        }
+      ],
+      "success": "trades made successfully"
+    }
+  }
+]
